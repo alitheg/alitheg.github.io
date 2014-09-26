@@ -5,7 +5,6 @@ date: 2014-07-18
 img: cabin.png
 alt: image-alt
 project-date: August 2014
-client: sanity
 category: Web Development
 description: Node.js web frontend for Linux scanners installed using SANE.
 
