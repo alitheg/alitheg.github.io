@@ -1,20 +1,47 @@
----
-layout: default
----
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alastair McFarlane</title>
+  <meta name="description" content="Alastair McFarlane - engineering leader in West Calder, Scotland. Currently working on Apache Trusted Releases at the Apache Software Foundation.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;800&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Alastair McFarlane</h1>
 
-<div class="home">
+    <section class="intro">
+      <p>I'm an engineering leader based in West Calder, Scotland. I've worked in software since 2009, starting as a developer, then DevOps, and more recently running engineering teams as Head of Engineering and CTO.</p>
+      <p>Right now I'm on the Tooling team at the <a href="https://www.apache.org/">Apache Software Foundation</a>, working on <a href="https://github.com/apache/tooling-trusted-releases">Apache Trusted Releases</a>, which helps Apache projects publish releases that people can verify.</p>
+      <p>I also build small apps under McFarlane Apps, and help run the CTO Craft mixers in Edinburgh. Outside of that I love open source, and tinkering with smart home software and hardware.</p>
+    </section>
 
-  <h1>Posts</h1>
+    <section>
+      <h2>Where I've worked</h2>
+      <ol class="roles" reversed>
+        <li><span class="when">2025–</span><span class="what">Apache Software Foundation<span class="role">Senior Software Engineer, Tooling</span></span></li>
+        <li><span class="when">2024–25</span><span class="what">Dune Technology<span class="role">CTO</span></span></li>
+        <li><span class="when">2023</span><span class="what">FreeAgent<span class="role">Engineering Manager, Mobile</span></span></li>
+        <li><span class="when">2022–23</span><span class="what">hundo<span class="role">Head of Engineering, then CTO</span></span></li>
+        <li><span class="when">2015–22</span><span class="what">PLAY<span class="role">DevOps Engineer, then Tech Lead, Head of Technical Operations and Head of Engineering</span></span></li>
+        <li><span class="when">2012–14</span><span class="what">Aridhia Informatics<span class="role">Web Developer, then DevOps Engineer</span></span></li>
+        <li><span class="when">2009–12</span><span class="what">Computer Application Services<span class="role">Web Application Developer</span></span></li>
+      </ol>
+    </section>
 
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+    <section>
+      <h2>Elsewhere</h2>
+      <ul class="links">
+        <li><a href="https://github.com/alitheg">GitHub</a><span>Open source and side projects</span></li>
+        <li><a href="https://www.linkedin.com/in/alastairmcfarlane">LinkedIn</a><span>Full work history</span></li>
+        <li><a href="https://mcfarlaneapps.co.uk/">McFarlane Apps</a><span>Apps I build and publish</span></li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

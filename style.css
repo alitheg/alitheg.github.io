@@ -1,3 +1,152 @@
----
-layout: style
----
+:root {
+  --bg: #eef1f0;
+  --ink: #1e2b2f;
+  --muted: #5b6b6e;
+  --accent: #7b4b7a;
+  --rule: #cbd3d1;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #161c1e;
+    --ink: #e6ecea;
+    --muted: #93a3a5;
+    --accent: #c99bc8;
+    --rule: #2e393b;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Schibsted Grotesk", system-ui, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+main {
+  max-width: 62rem;
+  margin: 0 auto;
+  padding: clamp(3rem, 10vw, 7rem) 1rem 5rem;
+}
+
+/* The name is the one loud thing on the page */
+h1 {
+  margin: 0 0 clamp(2rem, 6vw, 3.5rem);
+  font-size: clamp(3.25rem, 13vw, 9rem);
+  font-weight: 800;
+  line-height: 0.88;
+  letter-spacing: -0.045em;
+  max-width: 8ch;
+}
+
+h2 {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+section {
+  max-width: 38rem;
+}
+
+section + section {
+  margin-top: 3.5rem;
+}
+
+.intro p {
+  margin: 0 0 1em;
+}
+
+.intro p:first-child {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.roles,
+.links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.roles li {
+  display: grid;
+  grid-template-columns: 5.5rem 1fr;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--rule);
+}
+
+.roles li:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+
+.when {
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.what {
+  font-weight: 500;
+}
+
+.role {
+  display: block;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.links li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 1rem;
+  padding: 0.35rem 0;
+}
+
+.links a {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.links span {
+  color: var(--muted);
+}
+
+@media (max-width: 30rem) {
+  .roles li {
+    grid-template-columns: 1fr;
+    gap: 0.1rem;
+  }
+}
